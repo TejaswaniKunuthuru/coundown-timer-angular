@@ -1,0 +1,15 @@
+<div class="mainDiv col-sm-offset-4 col-sm-4">
+	<h3 class="heading col-sm-12">Countdown-Timer</h3>
+	<div  class="col-sm-12">
+    <label>Launch Date & Time</label> &nbsp;
+    <span>
+      <input placeholder="Enter Date & Time" [(ngModel)]="dateTime" [owlDateTimeTrigger]="dateTimePicker" [owlDateTime]="dateTimePicker" id="dateTimePicker">
+ <i class="glyphicon glyphicon-calendar" [owlDateTimeTrigger]="dateTimePicker" style="font-size:20px;margin-top:10px;"></i>
+      <owl-date-time #dateTimePicker></owl-date-time>
+    </span> 
+  </div>     
+  <div class="col-sm-12 btnDiv">    
+    <button type="button" class="btn countdownBtn" (click)='displayTime(dateTime)'>Countdown Starts</button>
+  </div>
+  <h4 class="col-sm-12 displayContent">{{Countdowntime}}</h4>
+</div>
