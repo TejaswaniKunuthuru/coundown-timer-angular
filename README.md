@@ -1,4 +1,4 @@
-# coundown-timer-angular
+# countdown-timer-angular
 countdown-timer is a simple component, used to calculate countdown time between current system date and user given date. which is designed in angular.
 
 <p align="center">
