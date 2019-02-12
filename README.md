@@ -1,5 +1,5 @@
-# countdown-timer-angular
-countdown-timer is a simple component, used to calculate countdown time between current system date and user given date. which is designed in angular.
+# Countdown Timer angular
+Countdown Timer is a simple component, used to calculate countdown time between current system date and user given date. which is designed in angular.
 
 <p align="center">
     <img  alt="Image-slider" src="Images/output.png" class="img-responsive">
