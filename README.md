@@ -36,5 +36,5 @@ Download the src folder from countdown-timer folder and install the required pac
    User enters date&time in the input field, will get that date&time and we will perform some operation and we will display the countdown-time in screen.
     
 
-In this countdown-timer creation, we used ng-pick-datetime plug-in to get date and time when we click on calender icon.
+In this countdown-timer creation, we used @angular/forms and ng-pick-datetime dependencies.
 
