@@ -26,7 +26,8 @@ Download the src folder from countdown-timer folder and install the required pac
 ## Adding countdown-timer component in your project
  Download the countdown-timer component from countdown-timer/src/app folder to your angular project and include required components from angular.
 
-```
+``` html
+
 <app-countdown-timer></app-countdown-timer>
 
 ```
