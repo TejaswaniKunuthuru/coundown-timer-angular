@@ -2,8 +2,8 @@
 	<h3 class="heading col-sm-12">Countdown-Timer</h3>
 	<div  class="col-sm-12">
     <label>Launch Date & Time</label> &nbsp;
-    <span>
-      <input placeholder="Enter Date & Time" [(ngModel)]="dateTime" [owlDateTimeTrigger]="dateTimePicker" [owlDateTime]="dateTimePicker" id="dateTimePicker">
+    <span id="cursor">
+      <input placeholder="Enter Date & Time" [(ngModel)]="dateTime" [owlDateTimeTrigger]="dateTimePicker" [owlDateTime]="dateTimePicker" id="dateTimePicker" [min]="min">
  <i class="glyphicon glyphicon-calendar" [owlDateTimeTrigger]="dateTimePicker" style="font-size:20px;margin-top:10px;"></i>
       <owl-date-time #dateTimePicker></owl-date-time>
     </span> 
