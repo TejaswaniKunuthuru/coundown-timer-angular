@@ -5,7 +5,7 @@ Countdown Timer is a simple component, used to calculate countdown time between 
     <img  alt="Image-slider" src="Images/output.png" class="img-responsive">
 </p>
 
-To preview demo of countdown-timer component, [Click here](https://angular-1jija4.stackblitz.io/)
+To preview demo of countdown-timer component, [Click here](https://angular-2n7cym.stackblitz.io)
 
 ## Using the complete angular component
 
