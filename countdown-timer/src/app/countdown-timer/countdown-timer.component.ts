@@ -6,7 +6,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./countdown-timer.component.css']
 })
 export class CountdownTimerComponent implements OnInit {
-
+public min = new Date();
   private launchDate: Date;
   private Countdowntime: String;
   counter;
@@ -47,6 +47,7 @@ export class CountdownTimerComponent implements OnInit {
 
       this.counter = setInterval(() => {
         const difference = (this.launchDate.getTime() - new Date().getTime())
+        console.log(difference);
         this.Countdowntime = this.calFunction(difference);
         if (difference < 0) {
           this.Countdowntime = ' Expired ';
@@ -54,7 +55,7 @@ export class CountdownTimerComponent implements OnInit {
         }
       }, 1000);
     } else {
-      this.Countdowntime = 'Please select valid date and time'
+      this.Countdowntime = 'Please select date and time'
     }
   }
   ngOnInit() {
