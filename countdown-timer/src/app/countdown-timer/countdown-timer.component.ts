@@ -50,7 +50,7 @@ public min = new Date();
         console.log(difference);
         this.Countdowntime = this.calFunction(difference);
         if (difference < 0) {
-          this.Countdowntime = ' Expired ';
+          this.Countdowntime = ' Selected Time has been Expired ';
           clearInterval(this.counter);
         }
       }, 1000);
