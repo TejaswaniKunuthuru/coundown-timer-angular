@@ -32,3 +32,6 @@ input{
 .displayContent{
   text-align: center;
 }
+#cursor{
+  cursor:pointer;
+}
