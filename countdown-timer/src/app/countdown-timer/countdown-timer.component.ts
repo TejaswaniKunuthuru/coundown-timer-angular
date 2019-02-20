@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-countdown-timer',
@@ -6,14 +7,24 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./countdown-timer.component.css']
 })
 export class CountdownTimerComponent implements OnInit {
-public min = new Date();
+  mins = new Subject();
+  public min;
   private launchDate: Date;
   private Countdowntime: String;
   counter;
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef) {
+    this.mins.subscribe(next => {
+      this.min = next;
+    });
+
+    setInterval(() => {
+      this.mins.next(new Date())
+    })
+  }
 
   calFunction(distance) {
+    console.log(distance);
     var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 30 * 12));
     var months = Math.floor((distance % (1000 * 60 * 60 * 24 * 30 * 12)) / (1000 * 60 * 60 * 24 * 30));
     var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
@@ -46,16 +57,16 @@ public min = new Date();
       this.launchDate = new Date(date);
 
       this.counter = setInterval(() => {
-        const difference = (this.launchDate.getTime() - new Date().getTime())
-        console.log(difference);
+        const difference = (this.launchDate.getTime() - new Date().getTime())       
         this.Countdowntime = this.calFunction(difference);
         if (difference < 0) {
-          this.Countdowntime = ' Selected Time has been Expired ';
+          this.Countdowntime = ' Expired ';
           clearInterval(this.counter);
         }
       }, 1000);
+
     } else {
-      this.Countdowntime = 'Please select date and time'
+      this.Countdowntime = 'Please select valid date and time'
     }
   }
   ngOnInit() {
